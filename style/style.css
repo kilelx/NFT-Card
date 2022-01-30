@@ -1,0 +1,192 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* img {
+    display: block;
+} */
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+a,
+a:visited {
+    color: unset;
+    text-decoration: none;
+}
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+}
+
+body {
+    background-color: hsl(217, 54%, 11%);
+    color: #fff;
+    font-family: 'Outfit', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    margin: 2rem auto;
+}
+
+#card {
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 10px;
+    height: 600px;
+    width: 350px;
+
+    padding: 1.5rem;
+    transition: all .3s ease;
+}
+
+#card:hover {
+    box-shadow: 0 10px 10px 7px hsl(215, 66%, 6%);
+}
+
+#link-img {
+    font-size: 0;
+}
+
+#image {
+    position: relative;
+
+    height: auto;
+    width: 100%;
+}
+
+#overlay {
+    background-position: center;
+    border-radius: 7px;
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    transition: all .5s ease;
+}
+
+#overlay:hover {
+    background-color: rgba(0, 255, 247, .5);
+    background-image: url(../images/icon-view.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#img-nft {
+    border-radius: 7px;
+    height: auto;
+    width: 100%;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+
+    margin: 1.75rem 0 1.25rem;
+}
+
+h1:hover {
+    color: var(--cyan);
+}
+
+h2 {
+    color: var(--soft-blue);
+    font-size: 1rem;
+    font-weight: 300;
+
+    margin-bottom: 1.75rem;
+}
+
+#infos {
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid hsl(215, 32%, 27%);
+    padding-bottom: 1.75rem;
+}
+
+#price {
+    color: var(--cyan);
+    font-weight: 600;
+    padding-left: 18px;
+}
+
+#timer {
+    color: var(--soft-blue);
+    padding-left: 20px;
+}
+
+.pictos {
+    font-size: 1rem;
+    position: relative;
+}
+
+.pictos::before {
+    content: '';
+    display: block;
+
+    background-size: 18px;
+    height: 18px;
+    width: 18px;
+
+    position: absolute;
+}
+
+#price {
+    background: url(../images/icon-ethereum.svg) no-repeat;
+}
+
+#timer {
+    background: url(../images/icon-clock.svg) no-repeat;
+}
+
+#author {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+#pp {
+    border-radius: 50%;
+    border: 1px solid #fff;
+
+    margin-right: .75rem;
+    height: auto;
+    width: 35px;
+}
+
+#author p {
+    color: var(--soft-blue);
+    font-size: .9rem;
+}
+
+#author a,
+#author a:visited {
+    color: #fff;
+    text-decoration: none;
+}
+
+#author a:hover,
+#author a:active,
+#author a:focus {
+    color: var(--cyan);
+}
+
+@media only screen and (max-width: 420px) {
+    #card {
+        height: 550px;
+        width: 330px;
+    }
+
+    #infos {
+        padding-bottom: 1rem;
+    }
+}
